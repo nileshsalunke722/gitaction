@@ -3,13 +3,14 @@ name: First git action demo
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   first-git-action:
     runs-on: ubuntu-latest
+
     steps:
-      -name: load repo code
-      uses: actions/checkout@v2
-      -name: print msg
-      runs: echo "This is hello from git action"
+      - name: load repo code
+        uses: actions/checkout@v2
+      - name: print msg
+        run: echo "This is hello from git action"
